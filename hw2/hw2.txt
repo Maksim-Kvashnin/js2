@@ -1,0 +1,25 @@
+1. Добавьте пустые классы для корзины товаров и элемента корзины товаров. Продумайте, какие методы понадобятся для работы с этими сущностями.
+
+class Cart {
+	calcPrice() {} // подсчитать стоимость всех товаров в корзине
+}
+
+class CartProduct {
+	this.name = name;
+	delProduct()  {} 	// удалить товар
+	confirmOrder(){}	// подтвердить заказ
+	getDiscont()  {} 	// получить скидку
+	setColor()    {}	// поменять цвет
+	setSize() 	  {}	//			размер
+	setCount()    {}	//			количество заказанного
+}
+
+
+2. Добавьте для GoodsList метод, определяющий суммарную стоимость всех товаров.
+  calcPrice() {
+	let totalPrice = '';
+    this.goods.forEach(good => {
+      const totalPrice += new GoodsItem(good.price);
+    });
+    document.querySelector('.goods-list').innerHTML = listHtml;
+  }
